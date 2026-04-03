@@ -6,13 +6,12 @@ pipeline {
         stage('Clone Code') {
             steps {
                 git branch: 'main', url: 'https://github.com/AryaSandilya/new-hotel-tourism.git'
-                
             }
         }
 
         stage('Build') {
             steps {
-                sh 'mvn clean package'
+                bat 'mvn clean package'
             }
         }
 
